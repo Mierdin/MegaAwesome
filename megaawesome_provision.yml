@@ -6,7 +6,11 @@
       apt: pkg={{ item }} state=latest update_cache=yes
       with_items:
       - python-pip
+      - python-dev
       - git
 
     - name: Install Pip dependencies
       pip: requirements=/vagrant/requirements.txt
+
+    - name: Install Tox
+      pip: name=tox
