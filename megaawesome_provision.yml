@@ -1,0 +1,12 @@
+---
+- hosts: all
+  sudo: yes
+  tasks:
+    - name: Install APT dependencies
+      apt: pkg={{ item }} state=latest update_cache=yes
+      with_items:
+      - python-pip
+      - git
+
+    - name: Install Pip dependencies
+      pip: requirements=/vagrant/requirements.txt
