@@ -1,0 +1,7 @@
+[run]
+branch = True
+source = megaawesome
+omit = megaawesome/tests/*
+
+[report]
+ignore-errors = True
